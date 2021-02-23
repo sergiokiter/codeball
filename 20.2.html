@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<!-- <meta http-equiv="refresh" content="20"> -->
+		<meta charset="utf-8"/>
+		<title>Balon de baloncesto</title>
+		<style type="text/css">
+			#campo{ 
+				position: relative;
+				background-image: url(cancha.jpg);
+				background-repeat: no-repeat;
+				width: 55%;
+				height:420px;
+				border: 2px solid #000;
+			 }
+			#campo div {
+			 	position: absolute;
+				animation-name: bota;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				animation-timing-function: cubic-bezier(.67,.06,.94,.74);
+			}
+			@keyframes bota{
+				from{top: 0px;}
+				to{top: 300px;}
+			}			
+			#campo div figure{
+				position: absolute;
+				animation: desplaza 6.3s linear infinite alternate;
+			 }
+			 @keyframes desplaza{
+				from{left: 0px; }
+				to{left: 900px;}
+			}
+
+			#campo div  figure img{
+				width: 50px; height: 50px;
+			 	animation-name: rota;
+				animation-duration: 6.3s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+				animation-direction: alternate; 
+			}
+			@keyframes rota{
+				from{transform: rotateZ(0deg);}
+				to{transform: rotateZ(360deg);}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="campo">
+			<div> <!--bota-->
+				<figure> <!--desplaza-->
+					<img src="1.jpg" alt="Pelota de Baloncesto"><!--rota-->
+				</figure>
+			</div>
+		</div>
+	</body>
+</html>
